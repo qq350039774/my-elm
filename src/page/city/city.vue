@@ -19,7 +19,7 @@
                 <span style="font-size: 10px;color:#999;">{{item.address}}</span></div>
             </van-cell>
         </van-list>
-        <div style="padding-top:15px;" v-if="historytitle">
+        <div style="padding-top:15px;" v-if="historytitle" @click="clearAll">
             <small>清空所有</small>
         </div>
     </div>

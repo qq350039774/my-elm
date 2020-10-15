@@ -8,16 +8,16 @@
                 <van-cell title="当前城市：" icon="location-o" is-link :value="guessCity" style="text-align: left;"></van-cell>
             </router-link>
         </van-cell-group>
-        <van-grid clickable="true">
-            <van-grid-item v-for="item in hotcity" :key="item"  :to="'/city/' + item.id" :text="item.name" />
+        <van-grid clickable>
+            <van-grid-item v-for="(item,idx) in hotcity" :key="idx"  :to="'/city/' + item.id" :text="item.name" />
         </van-grid>
-        <van-index-bar :index-list="indexList">
+        <van-index-bar :index-list="indexList" :sticky="false" highlight-color="#1989FA" >
             <van-index-anchor highlight-color="#07c160" v-for="(value, key) in groupcity" :key="key" :index="key"
                 style="text-align: left;">
                 {{key}}
-                <van-cell clickable="true" v-for="item in value" :key="item.id" :to="'/city/'+item.id" :title="item.name" style="text-align: left;" />
+                <van-cell clickable v-for="item in value" :key="item.id" :to="'/city/'+item.id" :title="item.name" style="text-align: left;" />
             </van-index-anchor>
-        </van-index-bar>
+        </van-index-bar> 
     </div>
 </template>
 <script>
@@ -37,7 +37,7 @@
                 guessCityid: '', //当前城市id
                 hotcity: [],     //热门城市列表
                 groupcity: {},   //所有城市列表
-                indexList: []
+                indexList: [],
             }
         },
 
@@ -62,7 +62,7 @@
                         sortobj[String.fromCharCode(i)] = this.groupcity[String.fromCharCode(i)];
                     }
                 }
-                this.indexList = Object.keys(sortobj);
+                this.indexList=Object.keys(sortobj);
                 this.groupcity = sortobj;
             })
         },
