@@ -8,7 +8,7 @@
         <van-icon name="arrow-left" />
       </template>
       <template #right>
-        <router-link to="/login"><van-icon name="user-o" /></router-link>
+        <router-link to="/login" class="blue-link">登录</router-link>
       </template>
         </van-nav-bar>
     </div>
@@ -36,3 +36,8 @@
         }
     }
 </script>
+<style>
+a:LINK, a:VISITED,a:HOVER{
+    color: #1989FA;
+}
+</style>

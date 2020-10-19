@@ -42,15 +42,18 @@
         },
 
         mounted() {
+            if(this.guessCity){
+                return;
+            }
             // 获取当前城市
             cityGuess().then(res => {
-                this.guessCity = res.name;
-                this.guessCityid = res.id;
+                    this.guessCity = res.name;
+                    this.guessCityid = res.id;
             })
 
             //获取热门城市
             hotcity().then(res => {
-                this.hotcity = res;
+                    this.hotcity = res;
             })
 
             //获取所有城市
@@ -75,7 +78,7 @@
             [Cell.name]: Cell,
             [CellGroup.name]: CellGroup,
             [IndexBar.name]: IndexBar,
-            [IndexAnchor.name]: IndexAnchor
+            [IndexAnchor.name]: IndexAnchor,
         },
 
         computed: {

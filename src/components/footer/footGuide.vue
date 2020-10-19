@@ -1,10 +1,10 @@
 <template>
     <div>
         <van-goods-action>
-            <van-goods-action-icon  icon="chat-o" text="Icon1" style="width:25%;"  />
-            <van-goods-action-icon icon="cart-o" text="Icon2" style="width:25%;" />
-            <van-goods-action-icon icon="shop-o" text="Icon3"  style="width:25%;" />
-            <van-goods-action-icon icon="shop-o" text="Icon4"  style="width:25%;" />
+            <van-goods-action-icon icon="shop-o" text="外卖" style="width:25%;"  />
+            <van-goods-action-icon icon="search" text="搜索" style="width:25%;" />
+            <van-goods-action-icon icon="records" text="订单"  style="width:25%;" />
+            <van-goods-action-icon icon="contact" text="我的"  style="width:25%;" />
           </van-goods-action>
     </div>
 </template>
