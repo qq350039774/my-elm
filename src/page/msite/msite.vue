@@ -11,7 +11,7 @@
             </van-swipe-item>
         </van-swipe>
         <div style="font-size: 10px;text-align: left;padding:5px 15px;"><van-icon name="location-o" />&nbsp;&nbsp;附近商家</div>
-        <shop-list></shop-list>
+        <shop-list :geohash="geohash" style="margin-bottom: 50px;"></shop-list>
         <foot-guide></foot-guide>
     </div>
 </template>
