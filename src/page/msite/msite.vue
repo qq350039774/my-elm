@@ -11,7 +11,7 @@
             </van-swipe-item>
         </van-swipe>
         <div style="font-size: 10px;text-align: left;padding:5px 15px;"><van-icon name="location-o" />&nbsp;&nbsp;附近商家</div>
-        <shop-list :geohash="geohash" style="margin-bottom: 50px;"></shop-list>
+        <shop-list  v-if="hasGetData" :geohash="geohash" style="margin-bottom: 50px;"></shop-list>
         <foot-guide></foot-guide>
     </div>
 </template>
@@ -59,6 +59,7 @@
             let res = await msiteAddress(this.geohash);
             this.msiteTitle = res.name;
             // 记录当前经度纬度
+            console.table(res);
             this.RECORD_ADDRESS(res);
 
             this.hasGetData = true;

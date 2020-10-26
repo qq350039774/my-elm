@@ -5,6 +5,7 @@ const login = r => require.ensure([], () => r(require('../page/login/login')), '
 const city = r => require.ensure([], () => r(require('../page/city/city')), 'city');
 const msite = r => require.ensure([], () => r(require('../page/msite/msite')), 'msite');
 const footer = r => require.ensure([], () => r(require('../components/footer/footGuide')), 'footer');
+const shop = r => require.ensure([], () => r(require('../page/shop/shop')), 'shop');
 
 
 export default [{
@@ -41,6 +42,10 @@ export default [{
         {
             path: '/footer',
             component: footer,
+        },
+        {
+            path: '/shop',
+            component: shop,
         },
     ]
 }]
