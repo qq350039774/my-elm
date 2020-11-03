@@ -3,9 +3,10 @@ import App from '../App'
 const home = r => require.ensure([], () => r(require('../page/home/home')), 'home');
 const login = r => require.ensure([], () => r(require('../page/login/login')), 'login');
 const city = r => require.ensure([], () => r(require('../page/city/city')), 'city');
-const msite = r => require.ensure([], () => r(require('../page/msite/msite')), 'msite');
+//const msite = r => require.ensure([], () => r(require('../page/msite/msite')), 'msite');
 const footer = r => require.ensure([], () => r(require('../components/footer/footGuide')), 'footer');
 const shop = r => require.ensure([], () => r(require('../page/shop/shop')), 'shop');
+const msite = ()=>import("@/page/msite/msite")
 
 
 export default [{

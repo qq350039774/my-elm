@@ -8,7 +8,7 @@
                     <van-col span="16">
                         <van-row>
                             <van-col span="7">
-                                <img :src="imgBaseUrl + item.image_path" style="display:block;width:100%;height:65px;">
+                                <img  v-lazy="imgBaseUrl + item.image_path" style="display:block;width:100%;height:65px;">
                             </van-col>
                             <van-col span="17">
                                 <div style="margin-left: 5px;">
